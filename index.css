@@ -46,9 +46,13 @@ select{
 
 .button{
     font-size: 18px;
-    color: whitesmoke;
-    background-color: rgb(168, 106, 216);
+    color: white;
+    background-color: rgb(126, 19, 207);
 }
+.button:hover{
+    background-color: rgb(145, 61, 209);
+}
+
 
 .language{
     width: 400px;
@@ -69,7 +73,12 @@ select{
 }
 
 .repos a{
-    margin-bottom: 1rem;
     color: rgb(49, 49, 49);
     text-decoration: none;
+    margin: 1rem;
 }
+
+a:hover{
+    color: rgb(161, 3, 101);
+}
+
