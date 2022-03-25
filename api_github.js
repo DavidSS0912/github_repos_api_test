@@ -1,17 +1,28 @@
 function getUser(user, language) {
-  clearContainer()
-  let url = `https://api.github.com/users/${user.value}/repos`
+  if (user.value != '' && language.value != 0) {
+    clearContainer()
 
-  getRepos(url, language.value)
+    let urlUser = `https://api.github.com/users/${user.value}`
+    fetch(urlUser)
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.login) {
+          let urlRepos = `https://api.github.com/users/${user.value}/repos`
+          getRepos(urlRepos, user.value, language.value)
+        } else {
+          alert(`\nNo se encontro al usuario: ${user.value} `)
+        }
+      })
+  } else alert('\nLos datos no son correctos.')
 }
 
-function getRepos(url, language) {
+function getRepos(url, userGit, language) {
   fetch(url)
     .then((respuesta) => respuesta.json())
     .then((repositorios) => {
       let contenedor = document.getElementById('contentRepos')
       let user = document.createElement('h2')
-      user.textContent = repositorios[0].owner.login
+      user.textContent = userGit
       contenedor.appendChild(user)
 
       repositorios.forEach((repositorio) => {
