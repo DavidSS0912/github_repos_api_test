@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    /* Para utilizar rem */
+    font-size: 62.5%;
+}
+
+.content{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    text-align: center;
+}
+
+input{
+    width: 400px;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 1rem 0.6rem rgb(243, 243, 243);
+    font-size: 18px;
+    background-color: white;
+}
+select{
+    font-size: 18px;
+}
+
+.button{
+    font-size: 18px;
+    color: whitesmoke;
+    background-color: rgb(168, 106, 216);
+}
+
+.language{
+    width: 400px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 1rem 0.6rem rgb(243, 243, 243);
+}
+
+
+.repos{
+    width: 800px;
+    font-size: 24px;
+}
+.repos h2{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.repos a{
+    margin-bottom: 1rem;
+    color: rgb(49, 49, 49);
+    text-decoration: none;
+}

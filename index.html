@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API GitHub</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="content">
+        <form class="form">
+            <label>Ingresa el nombre de usuario</label>
+            <input class="user" name="user" type="text" placeholder="GitHub@user">
+            <select class="language" name="language">
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>Kotlin</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>TypeScript</option>
+                <option>Dart</option>
+                <option>Go</option>
+                <option>Swift</option>
+                <option>PHP</option>
+            </select>
+            <input class="button" type="button" value="Enviar" onclick="getUser(user, language)">
+        </form>
+
+        <div id="repos" class="repos">
+            <div id="contentRepos" class="contentRepos">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./api_github.js"></script>
+
+</html>
